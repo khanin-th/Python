@@ -1,0 +1,8 @@
+def generateInsert(table, name):
+    ''' table: pandas.DataFrame with header
+    '''
+    col = list(table.columns)
+    for idx in range(len(table)):
+        # col = list(table.columns)
+        # data = list(table.loc[idx])
+        print('INSERT INTO', name, 'VALUES', tuple(table.loc[idx]), ';')
